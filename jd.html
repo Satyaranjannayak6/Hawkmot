@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HawkMot Internship Program</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: radial-gradient(circle at center, #1a4a8d 0%, #081a33 100%);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    width: 100%;
+    text-align: center;
+}
+
+.header .logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #a0d8ff;
+    text-shadow: 0 0 10px rgba(160, 216, 255, 0.5);
+}
+
+.header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.header h1 span {
+    color: #a0d8ff;
+}
+
+.subtitle {
+    font-style: italic;
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+/* Info Cards */
+.info-grid {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 40px;
+    justify-content: center;
+}
+
+.info-card {
+    background: white;
+    color: #333;
+    padding: 20px;
+    border-radius: 12px;
+    flex: 1;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.info-card i {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.info-card h3 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.info-card ul {
+    list-style: none;
+    font-size: 0.85rem;
+    text-align: left;
+}
+
+/* Icons Colors */
+.icon-blue { color: #3498db; }
+.icon-gold { color: #f1c40f; }
+.icon-yellow { color: #f39c12; }
+
+/* Details Section */
+.details-section {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    margin-bottom: 40px;
+    gap: 40px;
+}
+
+.highlights h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    border-left: 4px solid #3498db;
+    padding-left: 10px;
+}
+
+.highlights ul {
+    list-style: none;
+}
+
+.highlights ul li {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.important-box {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 350px;
+}
+
+.important-box h3 {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.important-box p {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+/* Button */
+.apply-button {
+    background: linear-gradient(to bottom, #4facfe 0%, #00f2fe 100%);
+    border: none;
+    padding: 15px 60px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 242, 254, 0.4);
+    transition: transform 0.2s;
+}
+
+.apply-button:hover {
+    transform: scale(1.05);
+}
+
+.footer-text {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .info-grid, .details-section {
+        flex-direction: column;
+        align-items: center;
+    }
+    .important-box { width: 100%; }
+    .logo{
+        margin-left: 5px;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="background-overlay"></div>
+
+    <main class="container">
+        <header class="header">
+            <img src="hawkmotlogo.png" alt="Logo" id="logo-img" style="height: 180px; width: 180px;"> 
+            <div class="logo">HawkMot Project Intern</div>
+            <h1>Kickstart Your <span>Career</span> with Hawkmot!</h1>
+            <p class="subtitle">Join Our Performance-Based Internship Program</p>
+        </header>
+
+        <section class="info-grid">
+            <div class="info-card">
+                <i class="fa-solid fa-calendar-check icon-blue"></i>
+                <h3>1-Month Evaluation</h3>
+                <ul>
+                    <li>Get a Certificate of Completion</li>
+                </ul>
+            </div>
+            <div class="info-card">
+                <i class="fa-solid fa-trophy icon-gold"></i>
+                <h3>Top Performers</h3>
+                <ul>
+                    <li>6-Month Paid Internship</li>
+                    <li><strong>₹ 10,000 Stipend</strong></li>
+                </ul>
+            </div>
+            <div class="info-card">
+                <i class="fa-solid fa-lightbulb icon-yellow"></i>
+                <h3>Improve & Succeed</h3>
+                <ul>
+                    <li>1 Extra Month to Grow</li>
+                </ul>
+            </div>
+        </section>
+
+        <div class="details-section">
+            <div class="highlights">
+                <h2>Program Highlights:</h2>
+                <ul>
+                Hawkmot Internship & Evaluation Policy
+Stage 1: Initial Evaluation (1 Month) Selcetion As per Resume Shortlisting
+All registered students will begin with a 1-month evaluation period at Hawkmot.
+During this period:
+•	Practical tasks and assignments will be given
+•	Performance, learning ability, and discipline will be evaluated
+<br><br>
+🔹 After 1 Month Performance-Based Outcomes
+Certificate of Completion (For ALL Students)
+•	Every student who successfully completes the 1-month evaluation period will receive a:
+o	Hawkmot Certificate of Completion
+•	This certificate is provided whether or not the student is selected for the 6-month internship.
+<br><br>
+
+✅ Case 1: High Performance (Top Performers)
+•	Students who perform very well during the first month will be:
+o	Selected for a 6-month internship
+o	Required to clear a short technical & communication round
+•	After selection:
+o	Internship duration: 6 months
+o	Stipend: ₹10,000 (as per Hawkmot policy)
+<br><br>
+🟡 Case 2: Mid-Level Performance
+•	Students with mid-level performance will be:
+o	Given 1 additional month to improve
+o	Provided guidance during this period
+After the additional month:
+•	If performance improves → eligibility for internship may be reviewed
+•	If performance does not improve → see Case 3
+<br><br>
+❌ Case 3: Did Not Meet Expectations
+•	Students who do not meet the required performance level after the evaluation period(s) will:
+o	Receive a Certificate of Completion (if they completed the 1-month program)
+o	❌ No further internship extension will be provided
+<br><br>
+
+📢 Important Notes
+.   And Selection For 1st Month Will be On Resume Shortlisting(Fill The form)
+.   After successfully completion we will provide experience certification
+•	Selection is strictly performance-based
+•	Hawkmot’s decisions will be final
+•	Stipend internships depend on performance and successful evaluation rounds
+<br><br>
+           
+
+        <div class="cta-container">
+         <a href="https://forms.gle/RrLa53ZVcxoEe1sq8">  <button id="applyBtn" class="apply-button">APPLY HERE</button></a> 
+            <p class="footer-text">Launch Your Career with Hawkmot Today!</p>
+        </div>
+    </main>
+
+    <script >
+        document.addEventListener('DOMContentLoaded', () => {
+    const applyBtn = document.getElementById('applyBtn');
+
+    applyBtn.addEventListener('click', () => {
+        alert('Redirecting to the HawkMot Application Form...');
+        // window.location.href = "https://your-application-link.com";
+    });
+
+    // Simple scroll reveal animation for the cards
+    const cards = document.querySelectorAll('.info-card');
+    cards.forEach((card, index) => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px)';
+        card.style.transition = 'all 0.5s ease-out';
+        
+        setTimeout(() => {
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+        }, 200 * index);
+    });
+});
+    </script>
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HawkMot | Web & Marketing</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="hawkmotlogo.png" alt="Logo" id="logo-img"> 
+            </div>
+            
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="jd.html">Career</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="mailto:info@hawkmot.com">Contact</a></li>
+            </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-text">
+                <h1>We build<br> <span>Websites, Applications, & Marketing solutions</span> that grow your business</h1>
+                <a href="mailto:info@hawkmot.in" class="cta-btn">Email Us</a>
+            </div>
+            <div class="hero-image">
+                <img src="p1.png" alt="Moth Illustration">
+            </div>
+        </div>
+        <div class="bg-elements"></div>
+    </section>
+
+    <section class="achievements">
+        <div class="container">
+            <h2 class="section-title">Our Achievements</h2>
+            <div class="section-subtitle">
+                <span class="line"></span>
+                <p>We deliver quality and trust</p>
+                <span class="line"></span>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3 class="counter" data-target="20">0</h3>
+                    <span class="plus">+</span>
+                    <p>Projects Completed</p>
+                </div>
+                <div class="stat-card">
+                    <h3 class="counter" data-target="20">0</h3>
+                    <span class="plus">+</span>
+                    <p>Happy Clients</p>
+                </div>
+                <div class="stat-card">
+                    <h3 class="counter" data-target="2">0</h3>
+                    <span class="plus">+</span>
+                    <p>Years Experience</p>
+                </div>
+                <div class="stat-card">
+                    <h3 class="counter" data-target="100">0</h3>
+                    <span class="percent">%</span>
+                    <p>Client Satisfaction</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<section class="free-services">
+    <div class="container">
+        <div class="services-header">
+            <h3>Free Services</h3>
+            <h2>Internship <span>(Unpaid)</span></h2>
+            <p>For All Computer Branch Students(Visit Our Career Page)</p>
+        </div>
+
+        <div class="resume-card">
+            <div class="card-content">
+                <div class="text-side">
+                    <h3>Send Your Resume</h3>
+                    <p>To our mail and wait for ATS and personal review and tips. It will absolutely free.</p>
+                    <a href="mailto:info@hawkmot.com" class="cta-btn">Email Us</a>
+                </div>
+                <div class="icon-side">
+                    <div class="envelope-wrapper">
+                        <i class="fa-solid fa-envelope-open-text"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="main-footer">
+    <div class="footer-container">
+        <div class="footer-brand">
+            <div class="logo">
+                <img src="hawkmotlogo.png" alt="HawkMot Logo">
+                
+            </div>
+            <h4 class="tagline">IT Services , IT Training & Diigital Services</h4>
+            <div class="footer-bottom-info">
+                <p><b>©2026 HawkMot. All rights reserved.</b></p>
+            </div>
+        </div>
+
+        <div class="footer-links-grid">
+            <div class="footer-col">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="#">Web Development</a></li>
+                    <li><a href="#">App Development</a></li>
+                    <li><a href="#">Digital Marketing</a></li>
+                    <li><a href="#">Email Marketing</a></li>
+                    <li><a href="#">Social Media Marketing</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col border-left">
+                <h3>Career</h3>
+              <a href="jd.html" target="_blank"><p class="career-text"><b>Curently Opening</b> <br>Project Intern</p></a>
+            </div>
+
+            <div class="footer-col border-left">
+                <h3>Contact</h3>
+                <a href="mailto:info@hawkmot.in" class="footer-email">info@hawkmot.in</a>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <script>
+        // 1. MOBILE NAV LOGIC
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+
+        if (hamburger) {
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                hamburger.classList.toggle('open');
+            });
+        }
+
+        // 2. COUNTER ANIMATION LOGIC
+        const counters = document.querySelectorAll('.counter');
+
+        const runCounter = () => {
+            counters.forEach(counter => {
+                counter.innerText = '0';
+                const target = +counter.getAttribute('data-target');
+                
+                const updateCount = () => {
+                    const count = +counter.innerText;
+                    const increment = target / 50; 
+
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count + increment);
+                        setTimeout(updateCount, 40); 
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+                updateCount();
+            });
+        };
+
+        // 3. SCROLL OBSERVER
+        const observerOptions = {
+            threshold: 0.4 // Starts when 40% of the section is visible
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    runCounter();
+                    observer.unobserve(entry.target); 
+                }
+            });
+        }, observerOptions);
+
+        const statsGrid = document.querySelector('.stats-grid');
+        if(statsGrid) {
+            observer.observe(statsGrid);
+        }
+    </script>
+</body>
+</html>
